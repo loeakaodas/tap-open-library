@@ -1,0 +1,2 @@
+include LICENSE
+include tap_open_library/schemas/*.json

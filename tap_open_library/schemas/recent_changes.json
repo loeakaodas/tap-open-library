@@ -1,0 +1,113 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "add-cover",
+        "add-book",
+        "edit-book",
+        "merge-authors",
+        "update",
+        "revert",
+        "new-account",
+        "register",
+        "lists"
+      ]
+    },
+    "timestamp": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        }
+      }
+    },
+    "ip": {
+      "type": ["null", "string"]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": ["null", "string"]
+        },
+        "reverted_changesets": {
+          "type": ["null", "array"],
+          "items": {
+            "type": "string"
+          }
+        },
+        "list": {
+          "type": ["null", "object"],
+          "properties": {
+            "key": {
+              "type": "string"
+            }
+          }
+        },
+        "seeds": {
+          "type": ["null", "array"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "add": {
+          "type": ["null", "array"],
+          "items": {
+            "key": {
+              "type": "string"
+            }
+          }
+        },
+        "remove": {
+          "type": ["null", "array"],
+          "items": {
+            "key": {
+              "type": "string"
+            }
+          }
+        },
+        "master": {
+          "type": ["null", "string"]
+        },
+        "duplicates": {
+          "type": ["null", "array"],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
