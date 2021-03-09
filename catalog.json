@@ -1,0 +1,161 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "recent_changes",
+      "key_properties": ["id"],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "timestamp": {
+            "format": "date-time",
+            "type": ["null", "string"]
+          },
+          "comment": {
+            "type": "string"
+          },
+          "changes": {
+            "items": {
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "revision": {
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "author": {
+            "properties": {
+              "key": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "ip": {
+            "type": ["null", "string"]
+          },
+          "data": {
+            "properties": {
+              "url": {
+                "type": ["null", "string"]
+              },
+              "reverted_changesets": {
+                "items": {
+                  "type": "string"
+                },
+                "type": ["null", "array"]
+              },
+              "list": {
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  }
+                },
+                "type": ["null", "object"]
+              },
+              "seeds": {
+                "items": {
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": ["null", "array"]
+              },
+              "add": {
+                "items": {},
+                "type": ["null", "array"]
+              },
+              "remove": {
+                "items": {},
+                "type": ["null", "array"]
+              },
+              "master": {
+                "type": ["null", "string"]
+              },
+              "duplicates": {
+                "items": {
+                  "type": "string"
+                },
+                "type": ["null", "array"]
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": ["null", "object"],
+        "additionalProperties": false
+      },
+      "stream": "recent_changes",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "schema-name": "recent_changes",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": ["properties", "id"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "kind"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "timestamp"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "comment"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "changes"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "author"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "ip"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": ["properties", "data"],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    }
+  ]
+}
